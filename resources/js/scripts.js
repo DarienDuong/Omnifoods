@@ -1,6 +1,4 @@
 $(document).ready(function() {
-	
-	
 	/* For the sticky navigation */
 	$('.js--section-features').waypoint(function(direction) {
 		if (direction == "down") {
@@ -11,16 +9,16 @@ $(document).ready(function() {
 	}, {
 		offset: '60px;'
 	});
-	
+
 	/* Scroll on buttons */
 	$('.js--scroll-to-plans').click(function() {
 		$('html, body').animate({scrollTop: $('.js--section-plans').offset().top}, 1000);
 	});
-	
+
 	$('.js--scroll-to-start').click(function() {
 		$('html, body').animate({scrollTop: $('.js--section-features').offset().top}, 1000);
 	});
-	
+
 	/* Navigation scroll */
 		$('a[href*="#"]')
 	  // Remove links that don't actually link to anything
@@ -29,8 +27,8 @@ $(document).ready(function() {
 	  .click(function(event) {
 		// On-page links
 		if (
-		  location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') 
-		  && 
+		  location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '')
+		  &&
 		  location.hostname == this.hostname
 		) {
 		  // Figure out element to scroll to
@@ -57,29 +55,29 @@ $(document).ready(function() {
 		  }
 		}
 	  });
-	
+
 	/* Animations on scroll */
-	
+
 	$('.js--wp-1').waypoint(function(direction) {
 		$('.js--wp-1').addClass('animated fadeIn');
 	}, {offset: '50%'
 	});
-	
+
 	$('.js--wp-2').waypoint(function(direction) {
 		$('.js--wp-2').addClass('animated fadeInUp');
 	}, {offset: '50%'
 	});
-	
+
 	$('.js--wp-3').waypoint(function(direction) {
 		$('.js--wp-3').addClass('animated fadeIn');
 	}, {offset: '50%'
 	});
-	
+
 	$('.js--wp-4').waypoint(function(direction) {
 		$('.js--wp-4').addClass('animated tada');
 	}, {offset: '50%'
 	});
-	
+
 	/* Mobile nav */
 	$('.js--nav-icon').click(function() {
 		var nav = $('.js--main-nav');
@@ -93,8 +91,8 @@ $(document).ready(function() {
 			icon.removeClass('ion-close-round');
 		}
 	});
-	
-	
+
+
 	/* Fix the nav bar */
 	$(window).resize(function(){
 		var nav = $('.js--main-nav');
@@ -109,7 +107,7 @@ $(document).ready(function() {
 		icon.removeClass('ion-close-round');
 	}
 	});
-	
+
 	/* Map */
 	var map = new GMaps({
 	  div: '.map',
@@ -118,7 +116,7 @@ $(document).ready(function() {
 	  zoom: 12,
 		scrollwheel:false
 	});
-	
+
 	map.addMarker({
 	  lat: 37.7576793,
 	  lng: -122.5076402,
@@ -127,5 +125,5 @@ $(document).ready(function() {
   		content: '<p>San Fracisco HQ</p>'
 	  	}
 	});
-				 
+
 });
