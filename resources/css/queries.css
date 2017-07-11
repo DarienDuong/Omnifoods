@@ -11,12 +11,16 @@
 }
 
 /* Small tablets to big tablet: from 768 to 1023px */
-@media only screen and (max-width: 1023px) {
+@media only screen and (max-width: 1024px) {
 	header {
     background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.7)), to(rgba(0, 0, 0, 0.3))), url(img/hero-min-query.jpg);
     background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.3)), url(img/hero-min-query.jpg);
     background-attachment: scroll;
 	}
+	
+	.section-testimonials {
+	background-attachment: scroll;
+}
 	
 	
 	body { font-size: 18px;}
